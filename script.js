@@ -116,6 +116,7 @@ playButton.addEventListener("click", () => {
       );
 
       m = morse[i];
+      audioCtx.resume();
       setTimeout(connect, 100);
       // connect();
       offset = m === "." ? 300 : m === "-" && 700;
