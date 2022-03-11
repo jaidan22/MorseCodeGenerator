@@ -116,7 +116,11 @@ playButton.addEventListener("click", () => {
       );
 
       m = morse[i];
-      audioCtx.resume();
+      
+      audioCtx..resume().then(() => {
+        console.log('Playback resumed successfully');
+      });
+      
       setTimeout(connect, 100);
       // connect();
       offset = m === "." ? 300 : m === "-" && 700;
